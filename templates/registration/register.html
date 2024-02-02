@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" /> {% endcomment %}
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'>
+    <script src='https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js'></script>
+  </head>
+  <body>
+    <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h2 class="text-center">Register</h2>
+          </div>
+          <div>
+            {% if messages %}
+            {% for message in messages %}
+            <h5 style="color: #b22222;">{{ message }}</h5>
+            {% endfor %}
+            {% endif %}
+          </div>
+          <div class="modal-body">
+              <form method="POST" class="form col-md-12 center-block">
+                {%  csrf_token %}
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="{{form.first_name.label_for}}" class="form-label">First Name :</label>
+                {{ form.first_name }}
+                <h6>{{form.first_name.errors}}</h6>
+              </div>
+              <div class="col-sm-6">
+                <label for="{{form.last_name.label_for}}" class="form-label">Last Name :</label>
+                {{ form.last_name }}
+                <h6>{{ form.last_name.errors }} {{form.tag}}</h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="{{form.email.label_for}}">Email:</label>
+                {{ form.email }}
+                <h6>{{ form.email.errors }}</h6>
+              </div>
+              <div class="col-sm-6">
+                <label for="{{form.username.label_for}}">Username:</label>
+                {{ form.username }}
+                <h6>{{ form.username.errors }}</h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="{{form.password1.label_for}}">Password:</label>
+                {{ form.password1 }}
+                <h6>{{ form.password1.errors }}</h6>
+              </div>
+              <div class="col-sm-6">
+                <label for="{{form.password2.label_for}}">ConfirmPassword:</label>
+                {{ form.password2 }}
+                <h6>{{ form.password2.errors }}</h6>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="{{form.profile_image.label_for}}" class="form-label">Choose Profile Picture</label>
+              {{ form.profile_image }}
+            </div>
+                <div class="form-group" style="margin-top: 3rem;">
+                  <button class="btn btn-primary btn-lg btn-block">Register</button>
+                  <span class="pull-right"><a href="{% url 'login' %}">Login</a></span>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <div class="col-md-12">
+            </div>	
+          </div>
+      </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    .errorlist{
+        color: red;
+    }
+    
+  </style>
+</html>

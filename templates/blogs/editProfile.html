@@ -1,0 +1,35 @@
+<form method="POST" class="form col-md-12 center-block">
+  {% csrf_token %}
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label for="{{ form.first_name.label_for }}" class="form-label">First Name :</label>
+      {{ form.first_name }}
+      <h6>{{ form.first_name.errors }}</h6>
+    </div>
+    <div class="col-sm-6">
+      <label for="{{ form.last_name.label_for }}" class="form-label">Last Name :</label>
+      {{ form.last_name }}
+      <h6>{{ form.last_name.errors }} {{ form.tag }}</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <label for="{{ form.email.label_for }}">Email:</label>
+      {{ form.email }}
+      <h6>{{ form.email.errors }}</h6>
+    </div>
+    <div class="col-sm-6">
+      <label for="{{ form.username.label_for }}">Username:</label>
+      {{ form.username }}
+      <h6>{{ form.username.errors }}</h6>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="{{ form.profile_image.label_for }}" class="form-label">Choose Profile Picture</label>
+    {{ form.profile_image }}
+  </div>
+  <div class="form-group" style="margin-top: 3rem;">
+    <button class="btn btn-primary btn-lg btn-block" style="background-color: #6c757d; border: none;">Save</button>
+  </div>
+</form>

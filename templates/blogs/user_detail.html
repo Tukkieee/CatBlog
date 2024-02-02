@@ -1,0 +1,66 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/style2.css' %}" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css" integrity="sha256-nwNjrH7J9zS/Ti4twtWX7O" />
+{% endblock %}
+
+{% block content %}
+  <div id="spacing" style="margin-top: 2rem;"></div>
+  <div class="container bootstrap snippets bootdey">
+    <div class="profile card">
+      <div class="profile-body">
+        <div class="profile-bio">
+          <div class="row">
+            <div class="col-md-5 text-center">
+              <img class="img-thumbnail md-margin-bottom-10" src="{{ user.profile_image.url }}" alt="{{ user.username }}" />
+            </div>
+            <div class="col-md-7" style="margin: auto 0;">
+              <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+              <span><strong>Email:</strong> {{ user.email }}</span>
+              {% comment %} <span><strong>Position:</strong> Web Designer</span> {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title mb-5">Blogs by {{ user.first_name }} {{ user.last_name }}</h4>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <ul class="verti-timeline list-unstyled" dir="ltr">
+                  {% for post in posts %}
+                    <li class="event-list">
+                      <div class="timeline-icon">
+                        <i class="mdi mdi-adjust bg-danger"></i>
+                      </div>
+                      <div class="event-content p-4">
+                        <h5 class="mt-0 mb-3 font-18">{{ post.title }}</h5>
+                        <div class="text-muted">
+                          <p>{{ post.get_description_snippet }}</p>
+                          <a href="{% url 'detail' post.slug %}" class="btn btn-outline-secondary">Continue Reading</a>
+                        </div>
+                      </div>
+                      <div class="event-date bg-primary" style="background-color:#6c757d !important;">
+                        <img class="d-block img-fluid" style="height: 50px;" src="{{ post.image.url }}" alt="{{ post.title }}" />
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+        <!-- end card -->
+      </div>
+    </div>
+  </div>
+{% endblock %}

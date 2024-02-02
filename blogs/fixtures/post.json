@@ -1,0 +1,134 @@
+[
+    {
+        "model": "blogs.blog",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "title": "The Mysterious World of Cats",
+            "description": "Cats, enigmatic creatures that they are, possess fascinating qualities that make them truly unique. Did you know that a cat sees about 6 times better than a human at night? Their incredible night vision is just one of the many intriguing aspects of their nature. When a cat drinks, its tongue, adorned with tiny barbs, scoops liquid up backward, showcasing their specialized anatomy. The ancient Egyptians, recognizing their value, were the first to domesticate cats around 3000 BC, utilizing them for pest control. Dive into the mystique of feline existence, exploring these and more captivating facts about our feline friends.",
+            "date_created": "2024-02-10T09:15:27.123Z",
+            "date_published": "2024-02-15T12:30:45.678Z",
+            "publish": false,
+            "slug": "the-mysterious-world-of-cats",
+            "category": 1
+        }
+    },
+    {
+        "model": "blogs.blog",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "title": "Cat Tales: Legends and Lore",
+            "description": "Embark on a journey through the ages as we uncover the rich tapestry of cat tales, legends, and lore. Delve into the myth that cats have nine lives, a saying rooted in their keen senses and quick reflexes that allow them to navigate perilous situations. Did you know that nearly 40 million American households share their lives with these enchanting beings? From ancient civilizations to modern households, cats have left an indelible mark on our hearts and culture. Join us in unraveling the mystifying and magical stories that surround our feline companions.",
+            "date_created": "2024-02-12T14:42:10.567Z",
+            "date_published": "2024-02-18T10:20:33.890Z",
+            "publish": false,
+            "slug": "cat-tales-legends-and-lore",
+            "category": 2
+        }
+    },
+    {
+        "model": "blogs.blog",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "title": "Cats and Their Sleep Secrets",
+            "description": "Unlock the mystery behind the sleep patterns of our feline companions. Did you know that healthy adult cats spend 15 percent of their lives in deep sleep? Their unique sleep cycle includes 50 percent in light sleep, leaving them with only 35 percent of awake time. Discover the reasons behind this intriguing behavior and how it contributes to their well-being. Join us as we explore the fascinating world of cat naps, debunking myths and shedding light on the importance of quality rest in a cat's life.",
+            "date_created": "2024-02-15T18:05:54.321Z",
+            "date_published": "2024-02-20T08:10:15.987Z",
+            "publish": false,
+            "slug": "cats-and-their-sleep-secrets",
+            "category": 3
+        }
+    },
+    {
+        "model": "blogs.blog",
+        "pk": 4,
+        "fields": {
+            "user": 2,
+            "title": "The Cat's Tongue: A Marvel of Design",
+            "description": "Uncover the marvel of feline anatomy as we explore the intricacies of a cat's tongue. Equipped with tiny barbs, a cat's tongue is a multifunctional tool that plays a crucial role in their daily activities. Join us in understanding how this unique adaptation aids in drinking, grooming, and even hunting. From the scientific to the charming, delve into the fascinating world of the cat's tongue and gain a newfound appreciation for the elegance of their design.",
+            "date_created": "2024-02-18T11:20:30.456Z",
+            "date_published": "2024-02-25T15:40:22.789Z",
+            "publish": false,
+            "slug": "the-cats-tongue-a-marvel-of-design",
+            "category": 4
+            
+        }
+    },
+    {
+        "model": "blogs.blog",
+        "pk": 5,
+        "fields": {
+            "user": 1,
+            "title": "Purring Wonders: Decoding Cat Communication",
+            "description": "Enter the enchanting realm of cat communication as we decode the wonders of purring. Discover the various meanings behind a cat's purr, from contentment to healing properties. Unravel the mystery of why cats purr not only during moments of joy but also in times of stress or discomfort. Join us on this insightful journey into the language of feline companionship, gaining a deeper understanding of the subtle ways our cats express themselves through their melodic purrs.",
+            "date_created": "2024-02-22T09:55:15.678Z",
+            "date_published": "2024-02-28T14:15:30.987Z",
+            "publish": false,
+            "slug": "purring-wonders-decoding-cat-communication",
+            "category": 2
+            
+        }
+    },
+    {
+        "model": "blogs.blog",
+        "pk": 6,
+        "fields": {
+            "user": 3,
+            "title": "Feline Fashion: The Cat's Whiskers",
+            "description": "Step into the world of feline fashion as we explore the significance of the cat's whiskers. More than just adorable features, a cat's whiskers serve essential functions in their daily lives. From measuring gaps to navigating in the dark, these extraordinary sensory tools are a testament to the cat's adaptability. Join us in celebrating the stylish and functional side of our feline friends, understanding why the cat's whiskers are truly the epitome of purr-fect design.",
+            "date_created": "2024-02-25T16:30:40.890Z",
+            "date_published": "2024-03-02T12:05:18.123Z",
+            "publish": false,
+            "slug": "feline-fashion-the-cats-whiskers",
+            "category": 1
+            
+        }
+    },
+    {
+        "model": "blogs.blog",
+        "pk": 7,
+        "fields": {
+            "user": 4,
+            "title": "Cat's Eye View: Night Vision Unveiled",
+            "description": "Peek into the mysterious world of a cat's vision as we unveil the secrets of their night vision. Cats see about 6 times better than humans in low light conditions, making them extraordinary hunters under the cover of darkness. Explore the scientific marvel behind their eyes, and learn how this unique ability has shaped their evolution. Join us in appreciating the nocturnal prowess of our feline companions and understanding the enchanting world they see when the sun goes down.",
+            "date_created": "2024-03-02T10:12:35.234Z",
+            "date_published": "2024-03-08T14:50:45.567Z",
+            "publish": false,
+            "slug": "cats-eye-view-night-vision-unveiled",
+            "category": 3
+            
+        }
+    },
+    {
+        "model": "blogs.blog",
+        "pk": 9,
+        "fields": {
+          "user": 2,
+          "title": "Whisker Wonderland: The Beauty of Cat Whiskers",
+          "description": "Journey into the whisker wonderland and explore the beauty of cat whiskers. Far more than just cute adornments, a cat's whiskers play a crucial role in their sensory perception and communication. Learn about the science behind whiskers, how they aid in navigation, and even detect changes in the environment. Join us in appreciating the elegance and functionality of these exquisite facial features that make our feline friends a true marvel of nature.",
+          "date_created": "2024-03-08T15:55:20.123Z",
+          "date_published": "2024-03-15T11:10:42.345Z",
+          "publish": false,
+          "slug": "whisker-wonderland-the-beauty-of-cat-whiskers",
+          "category": 2
+          
+        }
+      },
+      {
+        "model": "blogs.blog",
+        "pk": 10,
+        "fields": {
+          "user": 1,
+          "title": "Cats and Cultural Significance",
+          "description": "Dive into the rich tapestry of cultural significance that cats have woven throughout history. From ancient Egyptian reverence to modern-day adoration, cats hold a special place in the hearts of many cultures. Explore the symbolism and superstitions surrounding cats and how they have become iconic figures in literature, art, and folklore. Join us in celebrating the profound impact that cats have had on human culture, forging a lasting bond that transcends time and borders.",
+          "date_created": "2024-03-12T10:30:18.567Z",
+          "date_published": "2024-03-18T14:20:30.890Z",
+          "publish": false,
+          "slug": "cats-and-cultural-significance",
+          "category": 2
+          
+        }
+      }
+]

@@ -1,0 +1,63 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div id="spacing" style="margin-top: 2rem;"></div>
+  <div id="main-content" class="blog-page ">
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-lg-8 col-md-12 left-box">
+          {% for post in posts %}
+          <div class="card single_post">
+            <div class="body">
+              <div class="img-post">
+                <img class="d-block img-fluid" src="{{post.image.url}}" alt="First slide" />
+              </div>
+              <h3>{{post.title}}</h3>
+              <p>{{post.get_description_snippet}}</p>
+            </div>
+            <div class="footer">
+              <div class="actions">
+                <a href="{% url 'detail' post.slug  %}" class="btn btn-outline-secondary">Continue Reading</a>
+              </div>
+              <ul class="stats">
+                <li>
+                  <a href="javascript:void(0);">{{post.category}}</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="fa fa-heart">28</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="fa fa-comment">128</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {% endfor %}
+
+          <ul class="pagination pagination-primary">
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0);">Previous</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="javascript:void(0);">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0);">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0);">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0);">Next</a>
+            </li>
+          </ul>
+        </div>
+        {{ block.super }}
+      </div>
+    </div>
+  </div>
+{% endblock %}

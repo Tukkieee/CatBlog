@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Form</title>
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'>
+    <script src='https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js'></script>
+</head>
+<body>
+    <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="text-center">Create Blog Post</h2>
+            </div>
+            <div>
+              {% if messages %}
+              {% for message in messages %}
+              <h5 style="color: #b22222;">{{ message }}</h5>
+              {% endfor %}
+              {% endif %}
+            </div>
+            <div class="modal-body">
+                
+                <form method="POST" >
+                    {% csrf_token %}
+                    <div class="form-group">
+                      <label for="{{form.title.label_for}}" class="form-label">Title:</label>
+                      {{ form.title }}
+                    </div>
+                    <div class="form-group">
+                      <label for="{{form.description.label_for}}" class="form-label">Description</label>
+                      {{ form.description }}
+                    </div>
+                    <div class="form-group">
+                      <label for="{{form.category.label_for}}" class="form-label">Category:</label>
+                      {{ form.category }}
+                    </div>
+                    <div class="form-group">
+                      <label for="{{form.publish.label_for}}" class="form-label">Publish:</label>
+                      {{ form.publish }}
+                    </div>
+                    <div class="form-group">
+                      <label for="{{form.image.label_for}}" class="form-label">Choose Profile Picture:</label>
+                      {{ form.image }}
+                    </div>
+                    <!-- Add more fields as needed -->
+                    <button type="submit" class="btn btn-primary" name="create_blog">Create Post</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+              </div>	
+            </div>
+        </div>
+        </div>
+      </div>
+</body>
+</html>

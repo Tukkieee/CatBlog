@@ -1,0 +1,80 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div id="spacing" style="margin-top: 2rem;"></div>
+  <div id="main-content" class="blog-page">
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-lg-8 col-md-12 left-box">
+          {% comment %} {% for post in posts %}
+            {% endcomment %}
+            <div class="card single_post">
+              <div class="body">
+                <div class="img-post">
+                  <img class="d-block img-fluid" src="{{ object.image.url }}" alt="{{ object.title }} Image" />
+                </div>
+                <h3>{{ object.title }}</h3>
+                <h6>Written by: <a href="{% url 'user_detail' object.user.id %}">{{object.user.first_name}} {{object.user.last_name}}</a></h6>
+                <p>{{ object.description }}</p>
+              </div>
+            </div>
+            {% comment %}
+          {% endfor %} {% endcomment %}
+          <div class="card">
+            <div class="header">
+              <h2>Comments {{ object.count_comment }}</h2>
+            </div>
+            <div class="body">
+              <ul class="comment-reply list-unstyled">
+                {% for comment in comments %}
+                  <li class="row clearfix">
+                    <div class="icon-box col-md-2 col-4">
+                      <img class="img-fluid img-thumbnail" src="{{ comment.profile_Image.url }}" alt="{{ comment.title }} Image" />
+                    </div>
+                    <div class="text-box col-md-10 col-8 p-l-0 p-r0">
+                      <h5 class="m-b-0">{{ comment.name }}</h5>
+                      <p>{{ comment.message }}</p>
+                      <ul class="list-inline">
+                        <li>
+                          <a href="javascript:void(0);">{{ comment.date_created }}</a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="header">
+              <h2>Leave a reply <small>Your email address will not be published. Required fields are marked*</small></h2>
+            </div>
+            <div class="body">
+              <div class="comment-form">
+                <form method="POST"  class="row clearfix" >
+                  {% csrf_token %}
+                  <div class="col-sm-6">
+                    <div class="form-group">{{ comment_form.name }}</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">{{ comment_form.email }}</div>
+                  </div>
+                  <div class="col-sm-12" style="margin: 1rem 0;">
+                    <div class="form-group">{{ comment_form.message }}</div>
+                  </div>
+                  <input type="submit" class="btn btn-block btn-primary" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ block.super }}
+      </div>
+    </div>
+  </div>
+{% endblock %}
